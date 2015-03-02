@@ -131,29 +131,48 @@ Events
 The TransformerEvent Class dispatches all events needed for custom-
 handling the actions of the Transformer Class, to use them; you need to
 add the following code to your main TimeLine:
+
 import com.flashcube.TransformerEvent;
+
 import com.flashcube.Transformer;
+
 var myTransformer:Transformer = new Transformer(myObject);
+
 myTransformer.addEventListener( TransformEvent.ROTATE_END , doSomething );
+
 function doSomething( e:TransformEvent ):void
 { trace(“Rotation ended”); }
+
 ACTIVATE – Dispatched when the class is loaded.
+
 DEACTIVATE – Dispatched when the class is unloaded / deactivated.
+
 SCALE_START – Dispatched when the user clicks on one of the resize
 handles.
+
 SCALE_ENTER_FRAME – Dispatched on ENTER_FRAME when the user is
 resizing the object.
+
 SCALE_END – When the user let go of the mouse button.
+
 ROTATE_START - Dispatched when the user clicks on one of the rotation
 handles.
+
 ROTATE_ENTER_FRAME – Dispatched on ENTER_FRAME when the user is
 rotating the object.
+
 SCALE_END – When the user let go of the mouse button.
+
 DRAG_START - Dispatched when the user clicks on the object itself,
 starting to drag it.
+
 DRAG_MOUSE_MOVE – Dispatched on MOUSE_MOVE when the user is
 dragging the object.
+
 DRAG _END – When the user let go of the mouse button.
+
 SELECT – When the object is selected.
+
 DESELECT – When the object is deselected.
+
 DELETE – When the user deletes the object by pressing the DELETE key.
